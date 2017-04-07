@@ -11,12 +11,7 @@
 	<name>feign-eureka</name>
 	<description>Demo project for Spring Cloud</description>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+	
 
 	<modules>
 		<module>server</module>
@@ -30,6 +25,14 @@
 
 	<dependencyManagement>
 		<dependencies>
+		  <dependency>
+            <!-- Import dependency management from Spring Boot -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>1.5.2.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
@@ -51,5 +54,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
